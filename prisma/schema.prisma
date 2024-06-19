@@ -1,0 +1,156 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Creator {
+  id             String @id @default(auto()) @map("_id") @db.ObjectId
+  first_name     String
+  last_name      String
+  email          String
+  password       String
+  church_name    String 
+  podcasts       Podcast[]
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model User {
+  id             String @id @default(auto()) @map("_id") @db.ObjectId
+  firstName             String?
+  lastName              String? 
+  phoneNumber           String? 
+  email                 String
+  isBornAgain           Boolean      @default(true)
+  dateOfBirth           String?
+  password              String? 
+  listened_to    Listener[]
+  claps          Clap[]
+  chapterGifts   ChapterGifts[]      
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+
+model Podcast {
+  id             String @id @default(auto()) @map("_id") @db.ObjectId
+  title          String
+  caption       String?
+  description    String?
+  thumbnail_uri  String   //Url to the thumbnail
+  podcast_uri    String
+  creator        Creator  @relation(fields: [creatorId], references: [id])
+  creatorId      String   @db.ObjectId
+
+  listenerIDs    String[] @db.ObjectId
+  listeners      Listener[] @relation(fields: [listenerIDs],references: [id])
+  clapIDs        String[] @db.ObjectId
+  claps          Clap[]   @relation(fields: [clapIDs],references: [id])
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt        
+}
+
+
+// This is a model for modeling users who listen to podcasts
+
+model Listener {
+   id             String  @id @default(auto()) @map("_id") @db.ObjectId
+   user           User    @relation(fields: [userId], references: [id])
+   userId         String  @db.ObjectId
+   podcastsIDs    String[]@db.ObjectId
+   podcast       Podcast[] @relation(fields: [podcastsIDs],references: [id])
+   createdAt      DateTime @default(now())
+   updatedAt      DateTime @updatedAt 
+}
+
+//a clap is a reaction a user can perform while listening to a podcast
+
+model Clap {
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  user           User    @relation(fields: [userId], references: [id])
+  userId         String  @db.ObjectId
+  podcastsIDs    String[]@db.ObjectId
+  podcast       Podcast[] @relation(fields: [podcastsIDs],references: [id])
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt 
+
+}
+
+//can include on_donations
+
+
+//active users at aparticular moment
+model Book {
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  title          String
+  author         String
+  description    String
+  artwork        String
+  isPublished    Boolean  @default(false)
+  chapters       Chapter[]
+
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt 
+
+}
+
+
+model Chapter {
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  bookId         String  @db.ObjectId
+  book           Book    @relation(fields: [bookId],references: [id])
+  title          String
+  subTitle       String?
+  description    String?
+  isPreview      Boolean @default(false)
+  minimumGiftAmount Float? 
+  gifts          ChapterGifts[] 
+  paragraphs     Paragraph[]
+  audioUri       String? 
+
+
+  
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt 
+
+}
+
+
+model Paragraph {
+  id             String  @id @default(auto()) @map("_id") @db.ObjectId
+  text           String
+  chapterId      String  @db.ObjectId
+  chapter        Chapter @relation(fields: [chapterId],references: [id])
+
+
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt 
+
+}
+
+model ChapterGifts {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  amount         Float
+  chapterId      String   @db.ObjectId
+  chapter        Chapter  @relation(fields: [chapterId],references: [id])
+  user           User    @relation(fields: [userId], references: [id])
+  userId         String  @db.ObjectId
+  
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt 
+}
+
+
+
+
