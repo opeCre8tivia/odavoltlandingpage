@@ -24,7 +24,7 @@ const HeroSection = (props: Props) => {
         Enabling transactions happen within your conversations 
         </div>
         <div className="w-full text-center text-[16px] text-gray-600 font-medium ">
-          We're building a revolutionary social commerce platform that bridges the gap between businesses and customers with real-time chat. It goes beyond shopping by tackling food waste
+          We are building a revolutionary social commerce platform that bridges the gap between businesses and customers with real-time chat. It goes beyond shopping by tackling food waste
         </div>
 
       
