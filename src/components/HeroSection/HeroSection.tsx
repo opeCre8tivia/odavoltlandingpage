@@ -8,10 +8,10 @@ const HeroSection = (props: Props) => {
   return (
     <div className="w-full  h-[100vh]  bg-white md:flex justify-center items-center">
       {/* image */}
-      <div className=" w-full min-h-[100vh] md:w-[50%] md:h-full md:min-h-full bg-purple-950 flex justify-center items-center">
+      <div className=" w-full min-h-[100vh] md:w-[50%] md:h-full md:min-h-full bg-white flex justify-center items-center bg-[url('/img/hero-pattern.webp')]">
         <Image
           alt="odavolt app"
-          src="/robert.png"
+          src="/app.png"
           width={300}
           height={300}
           style={{ objectFit: "contain" }}
@@ -21,13 +21,10 @@ const HeroSection = (props: Props) => {
       {/* text */}
       <div className="w-full min-h-[100vh] md:w-[50%] md:h-full md:min-h-full flex flex-col justify-center items-center">
         <div className="w-full text-[30px] text-gray-800 font-bold text-center">
-          We are building <span className="text-purple-950">a family</span>
+        Enabling transactions happen within your conversations 
         </div>
         <div className="w-full text-center text-[16px] text-gray-600 font-medium ">
-          Where every member grows to the{" "}
-          <span className="underline">full knowledge of christ</span>. Join to
-          listen to exclusive teachings from{" "}
-          <span className="font-bold">Bishop Robert Ochur</span>
+          We're building a revolutionary social commerce platform that bridges the gap between businesses and customers with real-time chat. It goes beyond shopping by tackling food waste
         </div>
 
       
