@@ -1,12 +1,15 @@
 import React from "react"
 import CustomButton from "../CustomButton/CustomButton"
 import Image from "next/image"
+import Link from "next/link"
 
 type Props = {}
 
 const HeroSection = (props: Props) => {
+
+  
   return (
-    <div className="w-full  h-[100vh]  bg-white md:flex justify-center items-center">
+    <div className="w-full h-auto md:h-[100vh]  bg-white md:flex justify-center items-center p-6">
       {/* image */}
       <div className=" w-full min-h-[100vh] md:w-[50%] md:h-full md:min-h-full bg-white flex justify-center items-center bg-[url('/img/hero-pattern.webp')]">
         <Image
@@ -19,7 +22,7 @@ const HeroSection = (props: Props) => {
       </div>
 
       {/* text */}
-      <div className="w-full min-h-[100vh] md:w-[50%] md:h-full md:min-h-full flex flex-col justify-center items-center">
+      <div className="w-full h-auto md:min-h-[100vh] md:w-[50%] md:h-full md:min-h-full flex flex-col justify-center items-center">
         <div className="w-full text-[30px] text-gray-800 font-bold text-center">
         Enabling transactions happen within your conversations 
         </div>
@@ -28,11 +31,12 @@ const HeroSection = (props: Props) => {
         </div>
 
       
-          <CustomButton
-            title="DOWNLOAD ANDROID APP"
+         <Link href="https://forms.gle/Xw3oQjNAT5FEqcxk6"><CustomButton
+            title="Join Waiting List"
             loading={false}
             classes="mt-2"
           />
+          </Link> 
       
       </div>
     </div>
