@@ -13,21 +13,22 @@ const HeroSection = (props: Props) => {
       {/* image */}
       <div className=" w-full min-h-[100vh] md:w-[50%] md:h-full md:min-h-full bg-white flex justify-center items-center bg-[url('/img/hero-pattern.webp')]">
         <Image
-          alt="odavolt app"
+          alt="odavolt"
           src="/app.png"
           width={300}
           height={300}
           style={{ objectFit: "contain" }}
         />
+        
       </div>
 
       {/* text */}
-      <div className="w-full h-auto md:min-h-[100vh] md:w-[50%] md:h-full md:min-h-full flex flex-col justify-center items-center">
+      <div className="w-full h-auto md:w-[50%] md:h-full md:min-h-full flex flex-col justify-center items-center">
         <div className="w-full text-[30px] text-gray-800 font-bold text-center">
-        Enabling transactions happen within your conversations 
+        Enabling sales happen within your conversations 
         </div>
         <div className="w-full text-center text-[16px] text-gray-600 font-medium ">
-          We are building a revolutionary social commerce platform that bridges the gap between businesses and customers with real-time chat. It goes beyond shopping by tackling food waste
+        We enable customers and local businesses to chat,place and complete orders in their conversations
         </div>
 
       
@@ -44,3 +45,7 @@ const HeroSection = (props: Props) => {
 }
 
 export default HeroSection
+
+
+
+

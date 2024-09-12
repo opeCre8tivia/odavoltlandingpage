@@ -1,5 +1,4 @@
 import React from "react"
-import Spinner from "../Spinner"
 
 type Props = {
   onClick?: () => void
@@ -26,7 +25,7 @@ const CustomButton = ({
       } ${classes}`}
     >
       {loading ? (
-        <Spinner />
+          <div></div>
       ) : (
         <div className=" text-sm font-bold text-white whitespace-pre">
           {title}

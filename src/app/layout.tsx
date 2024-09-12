@@ -1,11 +1,14 @@
-"use client"
 
 import "./globals.css"
 import { Inter } from "next/font/google"
-import { store } from "../redux/store"
-import { Provider } from "react-redux"
+import { Metadata } from "next"
 
 const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "Odavolt",
+  description:"Odavolt is a social commerce app that enables you to buy or sell in your chats",
+};
 
 export default function RootLayout({
   children,
@@ -14,9 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Provider store={store}>{children}</Provider>
-      </body>
-    </html>
+    <body
+    >
+      {children}
+    </body>
+  </html>
   )
 }
