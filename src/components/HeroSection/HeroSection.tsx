@@ -28,7 +28,7 @@ const HeroSection = (props: Props) => {
         Enabling sales happen within your conversations 
         </div>
         <div className="w-full text-center text-[16px] text-gray-600 font-medium ">
-        We enable customers and local businesses to chat,place and complete orders in their conversations
+        A plartform where customers and local businesses chat,place and complete orders withing their conversations
         </div>
 
       
