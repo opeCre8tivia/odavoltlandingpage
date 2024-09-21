@@ -21,7 +21,7 @@ const CustomButton = ({
       onClick={onClick}
       data-testid="custom_btn"
       className={`min-w-[150px] h-[60px] border-white border-2 rounded-lg flex gap-2 items-center justify-center px-6 ${
-        disabled ? "bg-purple-200" : "bg-purple-950"
+        disabled ? "bg-purple-200" : "bg-[#800000]"
       } ${classes}`}
     >
       {loading ? (
