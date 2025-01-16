@@ -18,7 +18,7 @@ const Page=()=>{
         <Spacer height={20} />
 
         <p>
-        This Privacy Policy explains how Odavolt (we, us, or our) collects, uses, and shares information about you when you use our mobile application ("App") available on the Google Play Store.
+        This Privacy Policy explains how Odavolt (we, us, or our) collects, uses, and shares information about you when you use our mobile application (App) available on the Google Play Store.
         </p>
         
         <Spacer height={20} />
@@ -65,7 +65,7 @@ const Page=()=>{
                     </li>
                     <li >
                             <p>
-                            <b>Camera Access:</b> With your permission, we may access your device's camera to allow you to take and upload photos and videos within the App.
+                            <b>Camera Access:</b> With your permission, we may access your devices camera to allow you to take and upload photos and videos within the App.
                             </p>
                     </li>
 
@@ -168,12 +168,12 @@ const Page=()=>{
          <ul style={{listStyleType:"inherit"}}>
                         <li >
                             <p>
-                              <b>Location Services:</b> You can control whether the App accesses your location services through your device's settings.
+                              <b>Location Services:</b> You can control whether the App accesses your location services through your devices settings.
                             </p>
                         </li>
                         <li >
                             <p>
-                              <b>Camera Access:</b> You can control whether the App accesses your device's camera through your device's settings.
+                              <b>Camera Access:</b> You can control whether the App accesses your devices camera through your devices settings.
                             </p>
                         </li>
                         <li >
