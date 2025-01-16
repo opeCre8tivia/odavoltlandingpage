@@ -18,7 +18,7 @@ const Page=()=>{
         <Spacer height={20} />
 
         <p>
-        This Privacy Policy explains how Odavolt ("we," "us," or "our") collects, uses, and shares information about you when you use our mobile application ("App") available on the Google Play Store.
+        This Privacy Policy explains how Odavolt (we, us, or our) collects, uses, and shares information about you when you use our mobile application ("App") available on the Google Play Store.
         </p>
         
         <Spacer height={20} />
