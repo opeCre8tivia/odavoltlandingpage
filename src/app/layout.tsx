@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Odavolt",
-  description:"Odavolt is a social commerce app that enables you to buy or sell in your chats",
+  description:"Odavolt is a social commerce app that enables you to Chat,while buying or selling online within your community",
 };
 
 export default function RootLayout({
