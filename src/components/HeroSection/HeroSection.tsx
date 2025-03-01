@@ -15,10 +15,10 @@ const HeroSection = (props: Props) => {
       {/* text */}
       <div className="w-full h-auto md:w-[50%] md:h-full md:min-h-full flex flex-col justify-center items-center">
         <div className="w-full text-[30px] text-gray-800 font-bold text-center">
-          Enabling transactions to happen within your conversations 
+          Place orders while chatting online with businesses around you
         </div>
         <div className="w-full md:w-[60%] text-center text-[16px] text-gray-600 font-medium ">
-         Chat,while buying or selling online within your community
+          we enable transactions to happen within your online conversations wherever you are 
         </div>
 
       
