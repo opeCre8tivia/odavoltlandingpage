@@ -38,7 +38,7 @@ const HeroSection = (props: Props) => {
       <div className=" w-full min-h-[100vh] md:w-[50%] md:h-full md:min-h-full bg-white flex justify-center items-center bg-[url('/img/hero-pattern.webp')]">
         <Image
           alt="odavolt"
-          src="/assets/appscreen.png"
+          src="/assets/app.png"
           width={250}
           height={250}
           style={{ objectFit: "contain" }}
