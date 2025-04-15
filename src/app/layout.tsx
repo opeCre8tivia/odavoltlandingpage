@@ -8,6 +8,9 @@ import { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Odavolt",
   description:"Odavolt is a social commerce app that enables you to Chat,while buying or selling online within your community",
+  twitter:{
+    card:"summary_large_image"
+  }
 };
 
 export default function RootLayout({
