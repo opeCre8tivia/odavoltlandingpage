@@ -1,52 +1,49 @@
 "use client"
-import CustomButton from "../CustomButton/CustomButton"
 import Image from "next/image"
 import Link from "next/link"
 
 type Props = {}
 
 const HeroSection = (props: Props) => {
-
-  
   return (
-    <div className="w-full h-auto md:h-[100vh]  bg-white md:flex justify-center items-center p-6">
-      
+    <div className="w-full h-auto md:h-screen bg-white flex flex-col md:flex-row justify-center items-stretch p-4 sm:p-6 md:p-10 gap-6 md:gap-0">
+
       {/* text */}
-      <div className="w-full h-auto md:w-[50%] md:h-full md:min-h-full flex flex-col justify-center items-center">
-        <div className="w-full text-[30px] text-gray-800 font-bold text-center">
-          Place orders as you chat online with businesses around you
+      <div className="w-full md:w-1/2 h-auto flex flex-col justify-center items-center gap-4 order-2 md:order-1">
+        <div className="w-full max-w-md md:max-w-lg text-[26px] sm:text-[32px] md:text-[40px] leading-tight text-gray-800 font-bold text-center">
+          Connecting millions of buyers with sellers within their communities
         </div>
-        <div className="w-full md:w-[60%] text-center text-[16px] text-gray-600 font-medium ">
-          we enable transactions to happen within your conversations 
+        <div className="w-full md:w-[70%] text-center text-base sm:text-lg md:text-xl text-gray-600 font-medium">
+          Chat to Buy, Chat to Sell, Chat to Pay.
         </div>
 
-      
-         <Link href="https://forms.gle/Xw3oQjNAT5FEqcxk6">
-           <Image 
+        <Link
+          href="https://play.google.com/store/apps/details?id=com.odavolt&pcampaignid=web_share"
+          className="mt-2"
+        >
+          <Image
             src="/assets/google-play-badge.png"
-            alt="google play store"
+            alt="Get it on Google Play"
             width={250}
-            height={250}
-            style={{ width: "auto", height: "auto" }}
+            height={74}
+            className="w-[170px] sm:w-[200px] md:w-[220px] h-auto"
             loading="eager"
-           />
-          </Link> 
-      
+          />
+        </Link>
       </div>
 
-      <div className="h-[20px] md:hidden"></div>
-
       {/* image */}
-      <div className=" w-full min-h-[100vh] md:w-[50%] md:h-full md:min-h-full bg-white flex justify-center items-center bg-[url('/img/hero-pattern.webp')]">
-        <Image
-          alt="odavolt"
-          src="/assets/app.png"
-          width={250}
-          height={250}
-          style={{ objectFit: "contain" }}
-          loading="eager"
-        />
-        
+      <div className="w-full h-[280px] sm:h-[360px] md:h-auto md:w-1/2 bg-white bg-[url('/img/hero-pattern.webp')] bg-cover bg-center bg-no-repeat flex justify-center items-center order-1 md:order-2 rounded-2xl md:rounded-none">
+        <div className="relative w-[65%] sm:w-[55%] md:w-[60%] aspect-square">
+          <Image
+            alt="Odavolt app"
+            src="/assets/app.png"
+            fill
+            style={{ objectFit: "contain" }}
+            sizes="(min-width: 768px) 40vw, 65vw"
+            loading="eager"
+          />
+        </div>
       </div>
 
     </div>
@@ -54,7 +51,3 @@ const HeroSection = (props: Props) => {
 }
 
 export default HeroSection
-
-
-
-

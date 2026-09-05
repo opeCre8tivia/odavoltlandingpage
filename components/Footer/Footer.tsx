@@ -1,14 +1,14 @@
-import Image from "next/image";
+
 import Link from "next/link";
 
 const Footer = () => {
   return (
 
     <footer className="w-full h-auto" >
-    <div className="w-full h-[80px] bg-gray-100 flex flex-col justify-center items-center p-6">
+    <div className="w-full min-h-[80px] bg-gray-100 flex flex-col justify-center items-center p-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-                <div className="text-gray-600 text-[14px] font-medium">
+            <div className="hidden md:flex flex-col md:flex-row justify-center items-center gap-4">
+                <div className="text-center text-gray-600 text-[14px] font-medium">
                     We enable transactions to happen within your conversations
                 </div>
             </div>
