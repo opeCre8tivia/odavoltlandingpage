@@ -1,5 +1,4 @@
 "use client"
-import React from "react"
 import CustomButton from "../CustomButton/CustomButton"
 import Image from "next/image"
 import Link from "next/link"
@@ -23,11 +22,14 @@ const HeroSection = (props: Props) => {
 
       
          <Link href="https://forms.gle/Xw3oQjNAT5FEqcxk6">
-           <CustomButton
-            title="Join Waiting List"
-            loading={false}
-            classes="mt-4 mb-4"
-          />
+           <Image 
+            src="/assets/google-play-badge.png"
+            alt="google play store"
+            width={250}
+            height={250}
+            style={{ width: "auto", height: "auto" }}
+            loading="eager"
+           />
           </Link> 
       
       </div>
@@ -42,6 +44,7 @@ const HeroSection = (props: Props) => {
           width={250}
           height={250}
           style={{ objectFit: "contain" }}
+          loading="eager"
         />
         
       </div>
