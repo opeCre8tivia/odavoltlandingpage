@@ -6,10 +6,10 @@ type Props = {}
 
 const HeroSection = (props: Props) => {
   return (
-    <div className="w-full h-auto md:h-screen bg-white flex flex-col md:flex-row justify-center items-stretch p-4 sm:p-6 md:p-10 gap-6 md:gap-0">
+    <div className="w-full h-auto  bg-white flex flex-col md:flex-row justify-center items-stretch p-4 sm:p-6 md:p-10 gap-6 md:gap-0">
 
       {/* text */}
-      <div className="w-full md:w-1/2 h-auto flex flex-col justify-center items-center gap-4 order-2 md:order-1">
+      <div className="w-full md:w-1/2 h-auto flex flex-col justify-center items-center gap-4">
         <div className="w-full max-w-md md:max-w-lg text-[26px] sm:text-[32px] md:text-[40px] leading-tight text-gray-800 font-bold text-center">
           Connecting millions of buyers with sellers within their communities
         </div>
@@ -33,14 +33,14 @@ const HeroSection = (props: Props) => {
       </div>
 
       {/* image */}
-      <div className="w-full h-[280px] sm:h-[360px] md:h-auto md:w-1/2 bg-white bg-[url('/img/hero-pattern.webp')] bg-cover bg-center bg-no-repeat flex justify-center items-center order-1 md:order-2 rounded-2xl md:rounded-none">
-        <div className="relative w-[65%] sm:w-[55%] md:w-[60%] aspect-square">
+      <div className="w-full h-auto md:w-1/2 bg-white flex justify-center items-center rounded-2xl md:rounded-none">
+        <div className="relative w-[85%] sm:w-[78%] md:w-[80%] max-w-[420px] h-[600px] md:max-w-none aspect-square">
           <Image
             alt="Odavolt app"
             src="/assets/app.png"
             fill
             style={{ objectFit: "contain" }}
-            sizes="(min-width: 768px) 40vw, 65vw"
+            sizes="(min-width: 768px) 60vw, 85vw"
             loading="eager"
           />
         </div>
